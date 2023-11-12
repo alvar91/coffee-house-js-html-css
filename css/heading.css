@@ -1,0 +1,25 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.heading-2 {
+  margin: 0;
+  color: var(--text-color);
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  font-size: var(--font-size-large);
+
+  font-weight: var(--font-weight-bold);
+  line-height: var(--font-line-height-large);
+}
