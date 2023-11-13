@@ -1,0 +1,107 @@
+.menu {
+  margin-bottom: 105px;
+}
+
+.menu__heading {
+  margin: 0 auto;
+
+  margin-bottom: 39px;
+  width: 800px;
+  color: var(--text-color);
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+
+  font-size: var(--font-size-large);
+
+  font-weight: var(--font-weight-bold);
+  line-height: var(--font-line-height-large);
+}
+
+.menu__block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 190px;
+
+  padding: 20px;
+  padding-bottom: 13px;
+}
+
+.menu__text-content {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.menu__image-container {
+  height: 309px;
+  border-radius: var(--radius-standart);
+  overflow: hidden;
+}
+
+.menu__image {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.1);
+  transition: transform var(--transition-duration) var(--transition-function);
+  /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); */
+}
+
+.menu__content {
+  height: 100%;
+  border-radius: var(--radius-standart);
+  border: 1px solid var(--border-light);
+}
+
+.menu__heading2 {
+  margin: 0;
+  color: var(--title-color);
+  font-feature-settings: "clig" off, "liga" off;
+
+  font-size: var(--font-size-big);
+
+  font-weight: var(--font-weight-bold);
+  line-height: 30px;
+}
+
+.menu__list {
+  display: grid;
+  grid-template-columns: repeat(4, 310px);
+  grid-template-rows: minmax(506px, 1fr);
+  column-gap: var(--gap-standart);
+  row-gap: 40px;
+}
+
+.menu__item {
+  cursor: pointer;
+}
+
+.menu__item:hover .menu__image {
+  transform: scale(1);
+
+  transition: transform var(--transition-duration) var(--transition-function);
+}
+
+.menu__text {
+  margin: 0;
+
+  color: var(--text-color);
+  font-feature-settings: "clig" off, "liga" off;
+
+  font-size: var(--font-size-base);
+
+  font-weight: var(--font-weight-base);
+  line-height: var(--font-line-height-base);
+}
+
+.menu__price {
+  color: var(--title-color);
+  font-feature-settings: "clig" off, "liga" off;
+
+  font-size: var(--font-size-big);
+
+  font-weight: var(--font-weight-bold);
+  line-height: 30px;
+}
