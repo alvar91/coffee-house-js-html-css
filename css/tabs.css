@@ -1,0 +1,109 @@
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 39px;
+}
+
+.tabs__item {
+  display: flex;
+  padding: 8px 16px 8px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 100px;
+  border: 1px solid var(--border-light);
+  background-color: transparent;
+  cursor: pointer;
+
+  transition: color var(--transition-duration) var(--transition-function),
+    background-color var(--transition-duration) var(--transition-function);
+}
+
+.tabs__item--active {
+  background-color: var(--background-container);
+  border-color: var(--background-container);
+  pointer-events: none;
+}
+
+.tabs__circle--coffee {
+  background: url("../img/coffee-icon.svg");
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tabs__circle--tea {
+  background: url("../img/tea-icon.svg");
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tabs__circle--dessert {
+  background: url("../img/dessert-icon.svg");
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tabs__item--active .tabs__circle {
+  background-color: var(--primary);
+}
+
+.tabs__item--active .tabs__title {
+  color: var(--primary);
+}
+
+.tabs__item:hover,
+.tabs__item:focus {
+  background-color: var(--background-container);
+  border-color: var(--background-container);
+  transition: all var(--transition-duration) var(--transition-function);
+}
+
+.tabs__item:hover .tabs__circle,
+.tabs__item:focus .tabs__circle {
+  background-color: var(--primary);
+
+  transition: background-color var(--transition-duration)
+    var(--transition-function);
+}
+
+.tabs__item:hover .tabs__title,
+.tabs__item:focus .tabs__title {
+  color: var(--primary);
+
+  transition: color var(--transition-duration) var(--transition-function);
+}
+
+.tabs__circle {
+  width: 30px;
+  height: 30px;
+  padding: 3px 7px;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 100px;
+
+  background-color: var(--border-light);
+
+  cursor: pointer;
+
+  transition: background-color var(--transition-duration)
+    var(--transition-function);
+}
+
+.tabs__title {
+  color: var(--dark);
+  font-feature-settings: "clig" off, "liga" off;
+
+  font-size: 16px;
+
+  font-weight: 600;
+  line-height: 24px;
+
+  transition: color var(--transition-duration) var(--transition-function);
+}
