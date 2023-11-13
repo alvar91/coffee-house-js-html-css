@@ -1,0 +1,30 @@
+.footer {
+  margin-bottom: 40px;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px;
+  min-height: 450px;
+  border-radius: var(--radius-standart);
+  background-color: var(--background-container);
+}
+
+.footer__left-block {
+  width: 530px;
+}
+
+.footer__right-block {
+  width: 530px;
+}
+
+.footer__heading {
+  margin: 0;
+  margin-bottom: 40px;
+  color: var(--primary);
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--font-line-height-large);
+}
