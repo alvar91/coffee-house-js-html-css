@@ -258,3 +258,57 @@
   font-style: italic;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "Inter Semi";
+  src: url("../fonts/Inter-SemiBoldItalic.woff2") format("woff2"),
+    url("../fonts/Inter-SemiBoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Thin  BETA";
+  src: url("../fonts/Inter-ThinItalicBETA.woff2") format("woff2"),
+    url("../fonts/Inter-ThinItalicBETA.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Thin  BETA";
+  src: url("../fonts/Inter-ThinItalicBETA.woff2") format("woff2"),
+    url("../fonts/Inter-ThinItalicBETA.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Thin BETA";
+  src: url("../fonts/Inter-ThinBETA.woff2") format("woff2"),
+    url("../fonts/Inter-ThinBETA.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Thin BETA";
+  src: url("../fonts/Inter-ThinBETA.woff2") format("woff2"),
+    url("../fonts/Inter-ThinBETA.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Semi";
+  src: url("../fonts/Inter-SemiBoldItalic.woff2") format("woff2"),
+    url("../fonts/Inter-SemiBoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
