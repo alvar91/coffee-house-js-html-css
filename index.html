@@ -4,7 +4,19 @@
     <title>Coffee House - Home</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/favicon-16x16.png"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
 
     <link rel="preload" href="fonts/Inter-Bold.woff2" as="font" crossorigin />
@@ -20,7 +32,7 @@
   <body>
     <header class="header">
       <div class="container header__inner">
-        <a href="#" class="header__logo">
+        <a href="/" class="header__logo">
           <img class="header__logo-icon" src="./img/logo.svg" alt="Logo" />
         </a>
 
@@ -29,7 +41,7 @@
         <nav class="header__nav nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <a class="link" href="#favorites">Favorite coffee</a>
+              <a class="link" href="#favorite">Favorite coffee</a>
             </li>
             <li class="nav__item">
               <a class="link" href="#about">About</a>
@@ -43,7 +55,7 @@
           </ul>
         </nav>
 
-        <a class="link link--menu" href="#menu">Menu</a>
+        <a class="link link--menu" href="./menu.html">Menu</a>
       </div>
     </header>
 
@@ -53,8 +65,8 @@
           <div class="hero__inner">
             <div class="hero__content">
               <h2 class="hero__heading">
-                <span class="accent">Enjoy</span> premium coffee at our charming
-                cafe
+                <a href="./menu.html"><span class="accent">Enjoy</span></a>
+                premium coffee at our charming cafe
               </h2>
 
               <p class="hero__text">
@@ -63,22 +75,174 @@
                 and those seeking a warm and inviting space to enjoy their
                 favorite beverage.
               </p>
-              <button class="button-primary">
+              <a href="./menu.html" class="button-primary">
                 <span class="button-primary__block">
                   <span>Menu</span>
                   <span class="button-primary__icon"></span>
                 </span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="favorite">
+      <section id="favorite" class="favorite">
         <div class="container">
           <h3 class="heading-2">
             Choose your <span class="accent">favorite</span> coffee
           </h3>
+          <div class="slider">
+            <div class="slider__inner">
+              <button class="slider__arrow js-prev-arrow">
+                <span class="slider__circle">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g>
+                      <path
+                        d="M18.5 12H6M6 12L12 6M6 12L12 18"
+                        stroke="#403F3D"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </span>
+              </button>
+              <div class="slider__wrapper">
+                <div class="slider__container js-slider-container">
+                  <article class="slider__slide js-slide js-slide--active">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="img/coffee-slider-1.webp"
+                      />
+                      <img
+                        class="slider__image"
+                        src="img/coffee-slider-1.png"
+                        alt="Изображение 1"
+                        loading="lazy"
+                      />
+                    </picture>
+
+                    <h4 class="slider__heading">S’mores Frappuccino</h4>
+                    <p class="slider__content">
+                      This new drink takes an espresso and mixes it with brown
+                      sugar and cinnamon before being topped with oat milk.
+                    </p>
+                    <span class="slider__price">$5.50</span>
+                  </article>
+                </div>
+              </div>
+              <button class="slider__arrow slider__arrow--rotate js-next-arrow">
+                <span class="slider__circle">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g>
+                      <path
+                        d="M18.5 12H6M6 12L12 6M6 12L12 18"
+                        stroke="#403F3D"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                  </svg>
+                </span>
+              </button>
+            </div>
+
+            <div class="slider__pagination">
+              <div class="pagination js-slide-buttons">
+                <button
+                  class="pagination__dot js-slide-button pagination__dot--active"
+                  data-dot-id="1"
+                >
+                  <span class="bullet"></span>
+                </button>
+
+                <button class="pagination__dot js-slide-button" data-dot-id="2">
+                  <span class="bullet"></span>
+                </button>
+
+                <button class="pagination__dot js-slide-button" data-dot-id="3">
+                  <span class="bullet"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="about">
+        <div class="container">
+          <h3 class="heading-2 ta-left">
+            Resource is
+            <span class="accent">the perfect and cozy place</span> where you can
+            enjoy a variety of hot beverages, relax, catch up with friends, or
+            get some work done.
+          </h3>
+
+          <div class="about__gallery gallery">
+            <div class="gallery__left">
+              <div class="gallery__item gallery__first">
+                <picture>
+                  <source type="image/webp" srcset="img/about-1.webp" />
+                  <img
+                    class="gallery__image"
+                    src="img/about-1.jpg"
+                    alt="Image of a girl"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+
+              <div class="gallery__item gallery__second">
+                <picture>
+                  <source type="image/webp" srcset="img/about-2.webp" />
+                  <img
+                    class="gallery__image"
+                    src="img/about-2.jpg"
+                    alt="Image of a cup"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+            </div>
+            <div class="gallery__right">
+              <div class="gallery__item gallery__third">
+                <picture>
+                  <source type="image/webp" srcset="img/about-3.webp" />
+                  <img
+                    class="gallery__image"
+                    src="img/about-3.jpg"
+                    alt="Image of a guy"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+
+              <div class="gallery__item gallery__forth">
+                <picture>
+                  <source type="image/webp" srcset="img/about-4.webp" />
+                  <img
+                    class="gallery__image"
+                    src="img/about-4.jpg"
+                    alt="Image of a couple"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
