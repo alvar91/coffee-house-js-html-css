@@ -1,3 +1,7 @@
+.mobile-app {
+  margin-bottom: 94px;
+}
+
 .mobile-app__inner {
   display: flex;
   justify-content: space-between;
