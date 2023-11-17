@@ -75,3 +75,92 @@
     opacity var(--transition-duration) var(--transition-function),
     margin var(--transition-duration) var(--transition-function);
 }
+
+.button-app {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  width: 200px;
+  height: 64px;
+  padding: 12px 20px;
+  border-radius: 100px;
+  border: 1px solid var(--border-dark);
+
+  transform: translateY(-3px);
+
+  cursor: pointer;
+
+  transition: all var(--transition-duration) var(--transition-function);
+}
+
+.button-app:hover,
+.button-app:focus {
+  background-color: var(--background-container);
+
+  transition: all var(--transition-duration) var(--transition-function);
+}
+
+.button-app:hover .button-app__title,
+.button-app:focus .button-app__title {
+  color: var(--primary);
+
+  transition: all var(--transition-duration) var(--transition-function);
+}
+
+.button-app:hover .button-app__text,
+.button-app:focus .button-app__text {
+  color: var(--primary);
+
+  transition: all var(--transition-duration) var(--transition-function);
+}
+
+.button-app__left {
+  display: flex;
+  align-self: center;
+}
+
+.button-app__right {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.button-app__title {
+  color: var(--title-color);
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+
+  font-size: 10px;
+
+  font-weight: var(--font-weight-bold);
+  line-height: 14px;
+
+  transition: all var(--transition-duration) var(--transition-function);
+}
+
+.button-app__text {
+  color: var(--text-color);
+  font-feature-settings: "clig" off, "liga" off;
+
+  font-size: var(--font-size-base);
+
+  font-weight: var(--font-weight-bold);
+  line-height: var(--font-line-height-base);
+
+  transition: all var(--transition-duration) var(--transition-function);
+}
+
+.button-app svg path,
+.button-app svg path {
+  fill: var(--dark);
+
+  transition: all var(--transition-duration) var(--transition-function);
+}
+
+.button-app:hover svg path,
+.button-app:focus svg path {
+  fill: var(--primary);
+
+  transition: all var(--transition-duration) var(--transition-function);
+}
