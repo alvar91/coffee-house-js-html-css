@@ -69,7 +69,7 @@
   width: 60px;
   height: 60px;
   border-radius: 100px;
-  border: 1px solid var(--border-light);
+  border: 1px solid var(--border-dark);
   transition: all var(--transition-duration) var(--transition-function);
 }
 

@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   gap: var(--gap-standart);
+  padding-bottom: 6px;
   /* background-color: var(--dark); */
   transition: all var(--transition-duration) var(--transition-function);
 }
@@ -9,6 +10,10 @@
 .nav__item {
   font-size: var(--font-size-medium);
   line-height: var(--font-line-height-medium);
+}
+
+.nav__item:last-child {
+  margin-left: 324px;
 }
 
 /* @media (max-width: 1024px) {

@@ -9,6 +9,10 @@
   --primary: #e1d4c9;
   --accent: #b0907a;
 
+  --border-light: #c1b6ad;
+  --border-dark: #665f55;
+  --background-container: #665F55;
+
   --bg-color: var(--primary);
 
   --footer-bg-color: var(--dark);
@@ -39,7 +43,7 @@
   --font-size-medium: 20px;
   --font-line-height-medium: 50px;
 
-  --font-size-big: 30px;
+  --font-size-big: 24px;
   --font-line-height-big: 50px;
 
   --font-size-large: 60px;
@@ -48,6 +52,8 @@
   /* Layout */
   --min-width: 640px;
   --gap-standart: 40px;
+
+  --radius-standart: 40px;
 
   /* Transitions and Animations */
   --transition-duration: 0.5s;
