@@ -6,7 +6,7 @@
   margin: 0 auto;
 
   margin-bottom: 39px;
-  width: 800px;
+  max-width: 800px;
   color: var(--text-color);
   text-align: center;
   font-feature-settings: "clig" off, "liga" off;
@@ -46,6 +46,8 @@
   height: 100%;
   transform: scale(1.1);
   transition: transform var(--transition-duration) var(--transition-function);
+
+  object-fit: cover;
   /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); */
 }
 
@@ -106,4 +108,74 @@
 
   font-weight: var(--font-weight-bold);
   line-height: 30px;
+}
+
+.menu__container-load {
+  display: none;
+  justify-content: center;
+}
+
+.menu__load {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border: 1px solid var(--border-dark);
+
+  background-color: transparent;
+
+  cursor: pointer;
+
+  transition: all var(--transition-duration) var(--transition-function);
+}
+
+.menu__load:hover,
+.menu__load:focus {
+  border-color: var(--background-container);
+  background: var(--background-container);
+  transition: all var(--transition-duration) var(--transition-function);
+}
+
+.menu__load svg path {
+  transition: all var(--transition-duration) var(--transition-function);
+}
+
+.menu__load:hover svg path,
+.menu__load:focus svg path {
+  stroke: var(--primary);
+  transition: all var(--transition-duration) var(--transition-function);
+}
+
+@media (max-width: 1439px) {
+  .menu__list {
+    grid-template-columns: repeat(2, 310px);
+    justify-content: center;
+  }
+
+  .menu__item:nth-child(n + 5) {
+    display: none;
+  }
+
+  .menu__cards {
+    margin-bottom: 40px;
+  }
+
+  .menu__container-load {
+    display: flex;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu__heading {
+    font-size: 32px;
+
+    font-weight: var(--font-weight-bold);
+    line-height: 40px;
+  }
+
+  .menu__list {
+    grid-template-columns: repeat(1, 310px);
+  }
 }
