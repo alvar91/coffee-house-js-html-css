@@ -109,3 +109,38 @@ ul {
 .ta-left {
   text-align: left;
 }
+
+@media (max-width: 1024px) {
+  .link {
+    text-align: center;
+    font-size: 32px;
+    line-height: 40px;
+
+    font-weight: var(--font-weight-bold);
+    line-height: 40px;
+  }
+
+  .link--menu {
+    padding-right: 54px;
+  }
+
+  .link--menu::after {
+    width: 40px;
+    height: 40px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .link--address {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--font-line-height-base);
+  }
+
+  .link--phone {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--font-line-height-base);
+  }
+}
