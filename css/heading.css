@@ -16,7 +16,7 @@
   margin: 0;
   color: var(--text-color);
   text-align: center;
-  font-feature-settings: 'clig' off, 'liga' off;
+  font-feature-settings: "clig" off, "liga" off;
 
   font-size: var(--font-size-large);
 
@@ -24,4 +24,12 @@
   line-height: var(--font-line-height-large);
 
   letter-spacing: -0.2px;
+}
+
+@media (max-width: 767px) {
+  .heading-2 {
+    font-size: 32px;
+    font-weight: var(--font-weight-bold);
+    line-height: 40px;
+  }
 }
