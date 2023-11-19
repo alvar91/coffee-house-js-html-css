@@ -3,6 +3,7 @@
 }
 
 .header__inner {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,23 +27,14 @@
 .header__nav {
   margin-right: 40px;
 }
-
-.header__profile {
-  display: flex;
-  padding: 0;
-  width: 29px;
-  height: 29px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  z-index: 999;
-}
+*/
 
 @media (max-width: 1024px) {
   .header__nav {
     position: absolute;
     margin: 0;
     top: 0;
-    right: 0;
+    left: 0;
+    width: 100%;
   }
-} */
+}
