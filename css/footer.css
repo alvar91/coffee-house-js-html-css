@@ -28,3 +28,41 @@
   font-weight: var(--font-weight-bold);
   line-height: var(--font-line-height-large);
 }
+
+@media (max-width: 1439px) {
+  .footer__inner {
+    flex-direction: column;
+    padding: 100px 60px;
+    padding-bottom: 105px;
+    min-height: 736px;
+  }
+
+  .footer__left-block {
+    /* margin-bottom: 67px; */
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer__right-block {
+    width: 100%;
+    padding-bottom: 4px;
+  }
+
+  .footer__left-block {
+    width: 100%;
+  }
+
+  .footer__inner {
+    padding: 60px 16px;
+    padding-right: 15px;
+    min-height: 526px;
+  }
+
+  .footer__heading {
+    font-size: 32px;
+
+    font-weight: var(--font-weight-bold);
+    line-height: 125%;
+  }
+}
