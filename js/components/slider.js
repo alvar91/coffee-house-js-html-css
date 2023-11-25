@@ -15,13 +15,13 @@ export class Slider {
   // Активная точка
   #activeDot = null;
 
-  //Ширина одного слайда (px)
+  // Ширина одного слайда (px)
   #slideWidthMobile = 348;
   #slideWidth = 480;
 
   #mobileSize = 767;
 
-  //Текущее перемещение слайдов вдоль оси x
+  // Текущее перемещение слайдов вдоль оси x
   #currentTranslate = 0;
 
   // Идентификатор таймера
@@ -36,7 +36,7 @@ export class Slider {
   // Интервал времени, при котором происходит перелистывание
   #timeLeaf = 100;
 
-  //Количество слайдов при десктопе
+  // Количество слайдов при десктопе
   // #desktopDotsCount = 3;
 
   #touchStartX = 0;
@@ -77,14 +77,26 @@ export class Slider {
     for (let i = 1; i <= this.#slidesCount; i++) {
       const element = document.createElement("div");
 
+      // element.innerHTML = `
+      //     <button class="pagination__dot ${
+      //       i === this.#initialActiveSlideNumber
+      //         ? "pagination__dot--active"
+      //         : ""
+      //     } js-slide-button" data-dot-id="${i}">
+      //       <div class="bullet"></div>
+      //     </button>
+      //   `;
+
       element.innerHTML = `
-          <button class="pagination__dot ${
+          <div class="pagination__dot ${
             i === this.#initialActiveSlideNumber
               ? "pagination__dot--active"
               : ""
           } js-slide-button" data-dot-id="${i}">
-            <div class="bullet"></div>
-          </button>
+            <div class="bullet">
+              <div class="range js-range"></div>
+            </div>
+          </div>
         `;
 
       $buttons.appendChild(element.firstElementChild);
@@ -111,11 +123,16 @@ export class Slider {
 
   //Функция для перемещения слайдов вдоль оси x
   #translateSlides = (dotId) => {
+    // Сбрасываем выполненные проценты
+    this.#percents = 0;
+
+    // Сбрасываем состояние текущего range
+    this.#resetRange();
+
     // Если слайд оказывается за пределами слайдера
     if (dotId < 1) dotId = this.#slidesCount;
     else if (dotId > this.#slidesCount) dotId = 1;
 
-    console.log(dotId);
     // if (dotId > 1 && dotId < this.#slidesCount) {
     //   this.#prevSlideButton.disabled = false;
     //   this.#nextSlideButton.disabled = false;
@@ -131,7 +148,7 @@ export class Slider {
     //   }
     // }
 
-    //Выбираем новый дот в DOM
+    // Выбираем новый дот в DOM
     const currentDot = this.#slider.querySelector(
       `.js-slide-button[data-dot-id="${dotId}"]`
     );
@@ -154,15 +171,12 @@ export class Slider {
       }px)`;
     }
 
-    //Добавляем активный класс к новому доту и убираем активный класс с прежнего дота
-    this.#activeDot.classList.remove("pagination__dot--active");
-    currentDot.classList.add("pagination__dot--active");
+    // Добавляем активный класс к новому доту и убираем активный класс с прежнего дота
+    // this.#activeDot.classList.remove("pagination__dot--active");
+    // currentDot.classList.add("pagination__dot--active");
 
-    //Назначаем новый дот активным
+    // Назначаем новый дот активным
     this.#activeDot = currentDot;
-
-    // Сбрасываем выполненные проценты
-    this.#percents = 0;
   };
 
   #prevArrowHandler = (e) => {
@@ -197,6 +211,18 @@ export class Slider {
 
   #pauseAutoTranslate = () => {
     clearInterval(this.#timerId);
+
+    this.#timerId = null;
+  };
+
+  #updateRange = () => {
+    const currentRange = this.#activeDot.querySelector(".js-range");
+    currentRange.style.width = `${this.#percents}%`;
+  };
+
+  #resetRange = () => {
+    const currentRange = this.#activeDot.querySelector(".js-range");
+    currentRange.style.width = `0px`;
   };
 
   #playAutoTranslate = () => {
@@ -205,6 +231,8 @@ export class Slider {
 
       if (this.#percents > this.#limitPercents) {
         this.#nextSlideLeaf();
+      } else {
+        this.#updateRange();
       }
     }, this.#timeLeaf);
   };
@@ -218,14 +246,12 @@ export class Slider {
   };
 
   #startTouch = (e) => {
-    console.log("start");
     e.stopPropagation();
 
     this.#touchStartX = e.changedTouches[0].clientX;
   };
 
   #endTouch = (e) => {
-    console.log("end");
     e.stopPropagation();
 
     this.#touchEndX = e.changedTouches[0].clientX;
@@ -251,8 +277,12 @@ export class Slider {
       this.#playAutoTranslate
     );
 
-    this.#sliderWrapperSelector.addEventListener("touchstart", (e) => this.#startTouch(e));
-    this.#sliderWrapperSelector.addEventListener("touchend", (e) => this.#endTouch(e));
+    this.#sliderWrapperSelector.addEventListener("touchstart", (e) =>
+      this.#startTouch(e)
+    );
+    this.#sliderWrapperSelector.addEventListener("touchend", (e) =>
+      this.#endTouch(e)
+    );
   };
 
   #initAutoTranslate = () => {
