@@ -27,6 +27,7 @@ export class Burger {
     this.#burger.classList.remove(this.#burgerOpenSelector);
     this.#list.classList.remove(this.#showMobileMenuSelector);
 
+    this.#body.style.overflow = "auto";
     this.#body.style.overflowX = "hidden";
     this.#body.style.paddingRight = "0";
   };
