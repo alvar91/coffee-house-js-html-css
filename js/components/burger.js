@@ -6,6 +6,8 @@ export class Burger {
   #burgerOpenSelector = null;
   #showMobileMenuSelector = null;
 
+  #body = document.querySelector("body");
+
   constructor({
     burgerSelector,
     burgerOpenSelector,
@@ -24,11 +26,19 @@ export class Burger {
   #closeMenu = () => {
     this.#burger.classList.remove(this.#burgerOpenSelector);
     this.#list.classList.remove(this.#showMobileMenuSelector);
+
+    this.#body.style.overflow = "auto";
+    this.#body.style.paddingRight = "0";
   };
 
   #openMenu = () => {
     this.#burger.classList.add(this.#burgerOpenSelector);
     this.#list.classList.add(this.#showMobileMenuSelector);
+
+    const paddingOffset = window.innerWidth - this.#body.offsetWidth + "px";
+    this.#body.style.paddingRight = paddingOffset;
+
+    this.#body.style.overflow = "hidden";
   };
 
   #addEventListeners = () => {
@@ -53,8 +63,12 @@ export class Burger {
     });
 
     // В случае ресайза, закрываем меню
-    window.addEventListener("resize", () => {
-      this.#closeMenu();
+    window.addEventListener("resize", this.#closeMenu);
+
+    // В случае нажатия на Esc, закрываем меню
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") this.#closeMenu();
     });
   };
 
