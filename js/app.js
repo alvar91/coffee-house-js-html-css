@@ -1,4 +1,5 @@
 import { Burger } from "./components/burger.js";
+import { Slider } from "./components/slider.js";
 
 export default class App {
   init() {
@@ -9,5 +10,17 @@ export default class App {
       listSelector: ".js-nav__list",
     });
     burger.init();
+
+    const slider = new Slider({
+      sliderSelector: ".js-slider",
+      sliderContainerSelector: ".js-slider-container",
+      slidesSelector: ".js-slide",
+      buttonsContainerSelector: ".js-slide-buttons",
+      prevSlideButtonSelector: ".js-prev-arrow",
+      nextSlideButtonSelector: ".js-next-arrow",
+
+      sliderWrapperSelector: ".js-slider-wrapper",
+    });
+    slider.init();
   }
 }
