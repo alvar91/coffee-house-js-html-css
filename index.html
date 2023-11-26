@@ -19,22 +19,22 @@
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
 
-    <link rel="preload" href="fonts/Inter-Bold.woff2" as="font" crossorigin />
+    <link rel="preload" href="./fonts/Inter-Bold.woff2" as="font" crossorigin />
     <link
       rel="preload"
-      href="fonts/Inter-Regular.woff2"
+      href="./fonts/Inter-Regular.woff2"
       as="font"
       crossorigin
     />
 
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
 
     <script type="module" src="js/script.js"></script>
   </head>
   <body>
     <header class="header">
       <div class="container header__inner">
-        <a href="/" class="header__logo">
+        <a href="./" class="header__logo">
           <img class="header__logo-icon" src="./img/logo.svg" alt="Logo" />
         </a>
 
@@ -55,7 +55,7 @@
               <a class="link" href="#contacts-us">Contact us</a>
             </li>
             <li class="nav__item">
-              <a class="link link--menu" href="./menu.html">Menu</a>
+              <a class="link link--menu" href="./menu/">Menu</a>
             </li>
           </ul>
         </nav>
@@ -75,7 +75,7 @@
           <div class="hero__inner">
             <div class="hero__content">
               <h2 class="hero__heading">
-                <a href="./menu.html"><span class="accent">Enjoy</span></a>
+                <a href="./menu/"><span class="accent">Enjoy</span></a>
                 premium coffee at our charming cafe
               </h2>
 
@@ -85,7 +85,7 @@
                 and those seeking a warm and inviting space to enjoy their
                 favorite beverage.
               </p>
-              <a href="./menu.html" class="button-primary">
+              <a href="./menu/" class="button-primary">
                 <span class="button-primary__block">
                   <span>Menu</span>
                   <span class="button-primary__icon"></span>
@@ -101,7 +101,7 @@
           <h3 class="heading-2">
             Choose your <span class="accent">favorite</span> coffee
           </h3>
-          <div class="slider">
+          <div class="slider js-slider">
             <div class="slider__inner">
               <button class="slider__arrow js-prev-arrow">
                 <span class="slider__circle">
@@ -123,19 +123,18 @@
                   </svg>
                 </span>
               </button>
-              <div class="slider__wrapper">
+              <div class="slider__wrapper js-slider-wrapper">
                 <div class="slider__container js-slider-container">
-                  <article class="slider__slide js-slide js-slide--active">
+                  <article class="slider__slide js-slide">
                     <picture>
                       <source
                         type="image/webp"
-                        srcset="img/coffee-slider-1.webp"
+                        srcset="./img/coffee-slider-1.webp"
                       />
                       <img
                         class="slider__image"
-                        src="img/coffee-slider-1.png"
+                        src="./img/coffee-slider-1.png"
                         alt="Изображение 1"
-                        loading="lazy"
                       />
                     </picture>
 
@@ -145,6 +144,48 @@
                       sugar and cinnamon before being topped with oat milk.
                     </p>
                     <span class="slider__price">$5.50</span>
+                  </article>
+
+                  <article class="slider__slide js-slide">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="./img/coffee-slider-2.webp"
+                      />
+                      <img
+                        class="slider__image"
+                        src="./img/coffee-slider-2.png"
+                        alt="Изображение 2"
+                      />
+                    </picture>
+
+                    <h4 class="slider__heading">Caramel Macchiato</h4>
+                    <p class="slider__content">
+                      Fragrant and unique classic espresso with rich
+                      caramel-peanut syrup, with cream under whipped thick foam.
+                    </p>
+                    <span class="slider__price">$5.00</span>
+                  </article>
+
+                  <article class="slider__slide js-slide">
+                    <picture>
+                      <source
+                        type="image/webp"
+                        srcset="./img/coffee-slider-3.webp"
+                      />
+                      <img
+                        class="slider__image"
+                        src="./img/coffee-slider-3.png"
+                        alt="Изображение 3"
+                      />
+                    </picture>
+
+                    <h4 class="slider__heading">Ice coffee</h4>
+                    <p class="slider__content">
+                      A popular summer drink that tones and invigorates.
+                      Prepared from coffee, milk and ice.
+                    </p>
+                    <span class="slider__price">$4.50</span>
                   </article>
                 </div>
               </div>
@@ -172,7 +213,7 @@
 
             <div class="slider__pagination">
               <div class="pagination js-slide-buttons">
-                <button
+                <!-- <button
                   class="pagination__dot js-slide-button pagination__dot--active"
                   data-dot-id="1"
                 >
@@ -185,7 +226,7 @@
 
                 <button class="pagination__dot js-slide-button" data-dot-id="3">
                   <span class="bullet"></span>
-                </button>
+                </button> -->
               </div>
             </div>
           </div>
@@ -205,10 +246,10 @@
             <div class="gallery__left">
               <div class="gallery__item gallery__first">
                 <picture>
-                  <source type="image/webp" srcset="img/about-1.webp" />
+                  <source type="image/webp" srcset="./img/about-1.webp" />
                   <img
                     class="gallery__image"
-                    src="img/about-1.jpg"
+                    src="./img/about-1.jpg"
                     alt="Image of a girl"
                     loading="lazy"
                   />
@@ -217,10 +258,10 @@
 
               <div class="gallery__item gallery__second">
                 <picture>
-                  <source type="image/webp" srcset="img/about-2.webp" />
+                  <source type="image/webp" srcset="./img/about-2.webp" />
                   <img
                     class="gallery__image"
-                    src="img/about-2.jpg"
+                    src="./img/about-2.jpg"
                     alt="Image of a cup"
                     loading="lazy"
                   />
@@ -230,10 +271,10 @@
             <div class="gallery__right">
               <div class="gallery__item gallery__third">
                 <picture>
-                  <source type="image/webp" srcset="img/about-3.webp" />
+                  <source type="image/webp" srcset="./img/about-3.webp" />
                   <img
                     class="gallery__image"
-                    src="img/about-3.jpg"
+                    src="./img/about-3.jpg"
                     alt="Image of a guy"
                     loading="lazy"
                   />
@@ -242,10 +283,10 @@
 
               <div class="gallery__item gallery__forth">
                 <picture>
-                  <source type="image/webp" srcset="img/about-4.webp" />
+                  <source type="image/webp" srcset="./img/about-4.webp" />
                   <img
                     class="gallery__image"
-                    src="img/about-4.jpg"
+                    src="./img/about-4.jpg"
                     alt="Image of a couple"
                     loading="lazy"
                   />
@@ -329,10 +370,10 @@
           </div>
           <div class="mobile-app__right">
             <picture>
-              <source type="image/webp" srcset="img/mobile-screens.webp" />
+              <source type="image/webp" srcset="./img/mobile-screens.webp" />
               <img
                 class="mobile-app__image"
-                src="img/mobile-screens.png"
+                src="./img/mobile-screens.png"
                 alt="Image of phones"
                 loading="lazy"
               />
