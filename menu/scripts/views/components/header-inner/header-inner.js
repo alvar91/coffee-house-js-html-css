@@ -3,6 +3,8 @@ import { AbstractView } from "../../abstract-view.js";
 import { BurgerTemplate } from "../../templates/burger/index.js";
 import { NavTemplate } from "../../templates/nav-header/index.js";
 
+import Utils from "../../../utils/common.js";
+
 const navList = [
   {
     route: "#favorite",
@@ -89,6 +91,10 @@ export class HeaderInnerView extends AbstractView {
 
     window.addEventListener("resize", () => {
       closeMenu();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      Utils.addEscapeEvent(e, closeMenu);
     });
   };
 
