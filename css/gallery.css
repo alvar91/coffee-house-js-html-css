@@ -21,9 +21,11 @@
   transition: transform var(--transition-duration) var(--transition-function);
 }
 
-.gallery__item:hover .gallery__image {
-  transform: scale(1);
-  transition: transform var(--transition-duration) var(--transition-function);
+@media (hover: hover) {
+  .gallery__item:hover .gallery__image {
+    transform: scale(1);
+    transition: transform var(--transition-duration) var(--transition-function);
+  }
 }
 
 .gallery__first {
@@ -73,7 +75,6 @@
 }
 
 @media (max-width: 1439px) {
-
 }
 
 @media (max-width: 767px) {
@@ -99,10 +100,12 @@
 
   .gallery__image {
     width: min-content;
-    transform: scale(1.0);
+    transform: scale(1);
   }
 
-  .gallery__item:hover .gallery__image {
-    transform: scale(0.9);
+  @media (hover: hover) {
+    .gallery__item:hover .gallery__image {
+      transform: scale(0.9);
+    }
   }
 }

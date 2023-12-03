@@ -16,11 +16,13 @@
   transition: all var(--transition-duration) var(--transition-function);
 }
 
-.socials__link:hover,
-.socials__link:focus {
-  background-color: var(--primary);
-  border-color: var(--primary);
-  transition: all var(--transition-duration) var(--transition-function);
+@media (hover: hover) {
+  .socials__link:hover,
+  .socials__link:focus {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    transition: all var(--transition-duration) var(--transition-function);
+  }
 }
 
 ​ .socials__link svg path {
@@ -28,11 +30,13 @@
   transition: all var(--transition-duration) var(--transition-function);
 }
 
-.socials__link:hover svg path,
-.socials__link:focus svg path {
-  stroke: var(--dark);
+@media (hover: hover) {
+  .socials__link:hover svg path,
+  .socials__link:focus svg path {
+    stroke: var(--dark);
 
-  transition: all var(--transition-duration) var(--transition-function);
+    transition: all var(--transition-duration) var(--transition-function);
+  }
 }
 
 .socials__icon {

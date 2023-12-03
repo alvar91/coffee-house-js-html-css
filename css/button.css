@@ -18,15 +18,17 @@
   color: var(--primary);
 }
 
-.button:enabled:hover,
-.button:enabled:focus,
-.button:enabled:active {
-  border-color: var(--primary);
-  color: var(--dark);
-  background-color: var(--primary);
-  cursor: pointer;
-  transition: color var(--transition-duration) var(--transition-function),
-    background-color var(--transition-duration) var(--transition-function);
+@media (hover: hover) {
+  .button:enabled:hover,
+  .button:enabled:focus,
+  .button:enabled:active {
+    border-color: var(--primary);
+    color: var(--dark);
+    background-color: var(--primary);
+    cursor: pointer;
+    transition: color var(--transition-duration) var(--transition-function),
+      background-color var(--transition-duration) var(--transition-function);
+  }
 }
 
 .button-primary {
@@ -66,14 +68,16 @@
     margin var(--transition-duration) var(--transition-function);
 }
 
-.button-primary:hover .button-primary__icon {
-  width: 20px;
-  opacity: 1;
-  margin-left: 8px;
+@media (hover: hover) {
+  .button-primary:hover .button-primary__icon {
+    width: 20px;
+    opacity: 1;
+    margin-left: 8px;
 
-  transition: width var(--transition-duration) var(--transition-function),
-    opacity var(--transition-duration) var(--transition-function),
-    margin var(--transition-duration) var(--transition-function);
+    transition: width var(--transition-duration) var(--transition-function),
+      opacity var(--transition-duration) var(--transition-function),
+      margin var(--transition-duration) var(--transition-function);
+  }
 }
 
 .button-app {
@@ -94,25 +98,27 @@
   transition: all var(--transition-duration) var(--transition-function);
 }
 
-.button-app:hover,
-.button-app:focus {
-  background-color: var(--background-container);
+@media (hover: hover) {
+  .button-app:hover,
+  .button-app:focus {
+    background-color: var(--background-container);
 
-  transition: all var(--transition-duration) var(--transition-function);
-}
+    transition: all var(--transition-duration) var(--transition-function);
+  }
 
-.button-app:hover .button-app__title,
-.button-app:focus .button-app__title {
-  color: var(--primary);
+  .button-app:hover .button-app__title,
+  .button-app:focus .button-app__title {
+    color: var(--primary);
 
-  transition: all var(--transition-duration) var(--transition-function);
-}
+    transition: all var(--transition-duration) var(--transition-function);
+  }
 
-.button-app:hover .button-app__text,
-.button-app:focus .button-app__text {
-  color: var(--primary);
+  .button-app:hover .button-app__text,
+  .button-app:focus .button-app__text {
+    color: var(--primary);
 
-  transition: all var(--transition-duration) var(--transition-function);
+    transition: all var(--transition-duration) var(--transition-function);
+  }
 }
 
 .button-app__left {
@@ -158,15 +164,25 @@
   transition: all var(--transition-duration) var(--transition-function);
 }
 
-.button-app:hover svg path,
-.button-app:focus svg path {
-  fill: var(--primary);
+@media (hover: hover) {
+  .button-app:hover svg path,
+  .button-app:focus svg path {
+    fill: var(--primary);
 
-  transition: all var(--transition-duration) var(--transition-function);
+    transition: all var(--transition-duration) var(--transition-function);
+  }
 }
 
 @media (max-width: 1439px) {
   .button-app {
     transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .button-primary .button-primary__icon {
+    width: 20px;
+    opacity: 1;
+    margin-left: 8px;
   }
 }
