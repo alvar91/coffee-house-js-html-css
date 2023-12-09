@@ -1,0 +1,117 @@
+.calculate__block {
+  margin-bottom: 20px;
+}
+
+.calculate__title {
+  display: inline-block;
+  margin-bottom: 8px;
+
+  color: var(--title-color);
+  font-feature-settings: "clig" off, "liga" off;
+
+  font-size: var(--font-size-base);
+
+  font-weight: var(--font-weight-base);
+  line-height: var(--font-size-big);
+}
+
+.calculate__controls {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.calculate__total {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 31px;
+}
+
+.calculate__price-title {
+  color: var(--title-color);
+  font-feature-settings: "clig" off, "liga" off;
+
+  font-size: var(--font-size-big);
+
+  font-weight: var(--font-weight-bold);
+  line-height: 30px;
+}
+
+.calculate__price-sum {
+  color: var(--title-color);
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: var(--font-size-big);
+  font-weight: var(--font-weight-bold);
+  line-height: 30px;
+}
+
+.calculate__disclaimer {
+  position: relative;
+  margin: 0;
+  margin-bottom: 32px;
+  padding-left: 24px;
+
+  color: var(--text-color);
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 10px;
+  font-weight: var(--font-weight-bold);
+  line-height: 14px;
+}
+
+.calculate__disclaimer::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  background: url("../img/info-empty.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.calculate__close-btn {
+  display: flex;
+  padding: 12px 78px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 100px;
+  border: 1px solid var(--border-dark);
+
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+
+  background-color: transparent;
+
+  cursor: pointer;
+
+  transition: all var(--transition-duration) var(--transition-function);
+}
+
+@media (hover: hover) {
+  .calculate__close-btn:hover {
+    background-color: var(--background-container);
+    color: var(--primary);
+
+    transition: all var(--transition-duration) var(--transition-function);
+  }
+
+  /* .calculate__close-btn,
+  .calculate__close-btn:focus {
+    color: var(--primary);
+
+    transition: all var(--transition-duration) var(--transition-function);
+  } */
+}
+
+@media (max-width: 767px) {
+  .calculate {
+    gap: 8px;
+  }
+
+  .calculate__item {
+    padding: 8px 14px 8px 8px;
+  }
+}
