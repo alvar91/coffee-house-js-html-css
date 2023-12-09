@@ -1,7 +1,7 @@
 const createNavMenuTemplate = ({ route, title }) => {
   return `
         <li class="nav__item">
-            <a class="link" href="${route}">${title}</a>
+            <a class="link" href="../${route}">${title}</a>
         </li>`;
 };
 
