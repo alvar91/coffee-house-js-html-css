@@ -103,11 +103,10 @@ export class ProductsModel extends Observer {
   }
 
   updateRadioCalculateForm(updateType, { target, key }) {
-    const calculateForm = this.getCalculateForm();
+    const calculateForm = structuredClone(this.getCalculateForm());
 
     const isChecked = calculateForm[target][key]["checked"];
 
-    // TODO: make pure
     if (isChecked !== undefined) {
       Object.entries(calculateForm[target]).forEach(([key]) => {
         calculateForm[target][key] = Object.assign(calculateForm[target][key], {
