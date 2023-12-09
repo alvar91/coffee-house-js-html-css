@@ -114,7 +114,7 @@ ul {
   text-align: left;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .link {
     text-align: center;
     font-size: 32px;
@@ -146,5 +146,11 @@ ul {
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-bold);
     line-height: var(--font-line-height-base);
+  }
+}
+
+@media (max-width: 380px) {
+  .gt-mobile {
+    display: none;
   }
 }
