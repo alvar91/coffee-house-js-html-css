@@ -74,6 +74,8 @@
   grid-template-rows: minmax(506px, 1fr);
   column-gap: var(--gap-standart);
   row-gap: 40px;
+
+  margin-bottom: 40px;
 }
 
 .menu__item {
@@ -165,7 +167,7 @@
   }
 
   .menu__cards {
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
   }
 
   .menu__container-load {
@@ -184,4 +186,43 @@
   .menu__list {
     grid-template-columns: repeat(1, 310px);
   }
+}
+
+.hide {
+  display: none;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 0.6s;
+}
+
+.fade-out {
+  animation-name: fade-out;
+  animation-duration: 0.6s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.1;
+  }
+}
+
+.show-all .menu__item:nth-child(n + 5) {
+  display: block;
+
+  animation-name: fade;
+  animation-duration: 0.6s;
 }
