@@ -22,7 +22,13 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 960px) {
+  .nav__item:last-child {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
   .nav__list {
     position: fixed;
     align-items: flex-start;
@@ -56,7 +62,7 @@
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .show-mobile-menu {
     /* min-height: 724px; */
     height: 100%;
