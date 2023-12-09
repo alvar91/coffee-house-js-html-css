@@ -50,7 +50,7 @@
   transition: all var(--transition-duration) var(--transition-function);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .burger-menu {
     display: flex;
     justify-content: center;
