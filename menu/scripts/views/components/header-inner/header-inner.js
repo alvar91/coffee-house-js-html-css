@@ -77,7 +77,8 @@ export class HeaderInnerView extends AbstractView {
         !target.closest(".js-burger-menu") &&
         !target.classList.contains("show-mobile-menu") &&
         !target.closest(".menu__item") &&
-        !target.closest(".js-modal-wrapper")
+        !target.closest(".js-modal-wrapper") &&
+        !target.closest(".control")
       ) {
         closeMenu();
       }
