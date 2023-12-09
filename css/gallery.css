@@ -56,6 +56,10 @@
     align-items: center;
   }
 
+  .gallery__image {
+    transform: scale(1.05);
+  }
+
   .gallery__first {
     width: 688px;
     margin: 0;
@@ -72,9 +76,6 @@
   .gallery__forth {
     width: 688px;
   }
-}
-
-@media (max-width: 1439px) {
 }
 
 @media (max-width: 767px) {
@@ -100,7 +101,7 @@
 
   .gallery__image {
     width: min-content;
-    transform: scale(1);
+    transform: scale(0.98);
   }
 
   @media (hover: hover) {
