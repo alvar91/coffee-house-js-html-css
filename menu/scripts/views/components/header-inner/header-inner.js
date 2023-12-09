@@ -25,7 +25,8 @@ const navList = [
 ];
 
 const createHeaderInnerTemplate = () => {
-  return `<div class="container header__inner">
+  return `
+    <div class="container header__inner">
       <a href="../" class="header__logo">
         <img class="header__logo-icon" src="../img/logo.svg" alt="Logo" />
       </a>
@@ -74,7 +75,9 @@ export class HeaderInnerView extends AbstractView {
     document.body.addEventListener("click", ({ target }) => {
       if (
         !target.closest(".js-burger-menu") &&
-        !target.classList.contains("show-mobile-menu")
+        !target.classList.contains("show-mobile-menu") &&
+        !target.closest(".menu__item") &&
+        !target.closest(".js-modal-wrapper")
       ) {
         closeMenu();
       }
